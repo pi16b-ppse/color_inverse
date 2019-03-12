@@ -1,8 +1,8 @@
-var css = 'html {-webkit-filter: invert(100%);' + 'background-color: #f00; }';	
+var css = 'html {-webkit-filter: invert(0%);' + 'background-color: #f00; }';	
 var style = document.createElement('style');
 
 style.type = 'text/css';
-if (style.styleSheet){
+if (style.styleSheet) {
     style.styleSheet.cssText = css;
 } else {
     style.appendChild(document.createTextNode(css));
