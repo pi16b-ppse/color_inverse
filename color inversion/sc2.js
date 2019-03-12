@@ -1,4 +1,4 @@
-var css = 'html {-webkit-filter: invert(0%);' + 'background-color: #f00; }';	
+var css = 'html {background-color: #fff;' + '-webkit-filter: invert(0%);' + 'filter: invert(0%); }';
 var style = document.createElement('style');
 
 style.type = 'text/css';
@@ -7,4 +7,4 @@ if (style.styleSheet) {
 } else {
     style.appendChild(document.createTextNode(css));
 }
-document.body.appendChild(style);
+document.documentElement.appendChild(style);
