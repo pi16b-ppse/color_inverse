@@ -8,10 +8,11 @@ if (style.styleSheet) {
     style.styleSheet.cssText = css;
 } else {
 	if (el.length == 0) {
-		style.id = '0';		
-        style.appendChild(document.createTextNode(css2));
+		style.id = '1';		
+        style.appendChild(document.createTextNode(css));
 		document.documentElement.appendChild(style);
 	}
+	else 
     if (el[el.length - 1].id === '0') {	
         style.id = '1';	
         style.appendChild(document.createTextNode(css));		
