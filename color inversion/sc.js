@@ -7,12 +7,12 @@ style.type = 'text/css';
 if (style.styleSheet) {
     style.styleSheet.cssText = css;
 } else {
-	if (el.length == 0) {
-		style.id = '1';		
+    if (el.length == 0) {
+        style.id = '1';		
         style.appendChild(document.createTextNode(css));
-		document.documentElement.appendChild(style);
-	}
-	else 
+        document.documentElement.appendChild(style);
+    }
+    else 
     if (el[el.length - 1].id === '0') {	
         style.id = '1';	
         style.appendChild(document.createTextNode(css));		
