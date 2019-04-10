@@ -12,13 +12,14 @@ if (style.styleSheet) {
         style.appendChild(document.createTextNode(css));
         document.documentElement.appendChild(style);
     }
-    else 
-    if (el[el.length - 1].id === '0') {	
-        style.id = '1';	
-        style.appendChild(document.createTextNode(css));		
-    } else {	
-        style.id = '0';		
-        style.appendChild(document.createTextNode(css2));		
+    else { 
+        if (el[el.length - 1].id === '0') {	
+            style.id = '1';	
+            style.appendChild(document.createTextNode(css));		
+        } else {	
+            style.id = '0';		
+            style.appendChild(document.createTextNode(css2));		
+        }
     }
 }
 document.documentElement.appendChild(style);
