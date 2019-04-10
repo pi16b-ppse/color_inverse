@@ -11,8 +11,7 @@ if (style.styleSheet) {
         style.id = '1';		
         style.appendChild(document.createTextNode(css));
         document.documentElement.appendChild(style);
-    }
-    else { 
+    } else { 
         if (el[el.length - 1].id === '0') {	
             style.id = '1';	
             style.appendChild(document.createTextNode(css));		
