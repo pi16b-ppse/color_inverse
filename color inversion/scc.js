@@ -1,13 +1,12 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
-    chrome.tabs.executeScript(null, {file:"jquery.js"}, function() {
-        chrome.tabs.executeScript(null, {file:"sc.js"});
+    chrome.tabs.executeScript(null, {
+        file: "sc.js"
     });
 });
 chrome.extension.onMessage.addListener(function(request){
-    if (request == true) {
+    if (request == '1') {
         chrome.browserAction.setIcon({path: "icon2.png"});
-    }
-    else {
+    } else {
         chrome.browserAction.setIcon({path: "icon.png"});
     }
 });

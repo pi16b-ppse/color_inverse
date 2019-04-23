@@ -1,6 +1,25 @@
-if(!$("html").hasClass('invex')) {
-    $("<style type='text/css'> .inv{background-color: #fff; -webkit-filter: invert(100%); filter: invert(100%); } </style>").appendTo("html");
-    $("html").attr('class', 'invex');
+var css = 'html {background-color: #fff;' + '-webkit-filter: invert(100%);' + 'filter: invert(100%); }';	
+var css2 = 'html {background-color: #fff;' + '-webkit-filter: invert(0%);' + 'filter: invert(0%); }';
+var style = document.createElement('style');
+var el = document.getElementsByTagName("style");
+
+style.type = 'text/css';
+if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+} else {
+    if (el.length == 0) {
+        style.id = '1';		
+        style.appendChild(document.createTextNode(css));
+        document.documentElement.appendChild(style);
+    } else { 
+        if (el[el.length - 1].id === '0') {	
+            style.id = '1';	
+            style.appendChild(document.createTextNode(css));		
+        } else {	
+            style.id = '0';		
+            style.appendChild(document.createTextNode(css2));		
+        }
+    }
 }
-$("html").toggleClass('inv');
-chrome.extension.sendMessage($("html").hasClass('inv'));
+document.documentElement.appendChild(style);
+chrome.extension.sendMessage(style.id);
