@@ -3,3 +3,4 @@ if(!$("html").hasClass('invex')) {
     $("html").attr('class', 'invex');
 }
 $("html").toggleClass('inv');
+chrome.extension.sendMessage($("html").hasClass('inv'));
