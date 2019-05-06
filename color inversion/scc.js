@@ -1,5 +1,5 @@
-const PATH1 = "icon.png";
-const PATH2 = "icon2.png";
+const PATH2 = "icon.png";
+const PATH1 = "icon2.png";
 
 chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.tabs.executeScript(null, {file:"jquery.js"}, function() {
@@ -8,9 +8,9 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 });
 chrome.extension.onMessage.addListener(function(request){
     if (request == true) {
-        chrome.browserAction.setIcon({path: PATH2});
+        chrome.browserAction.setIcon({path: PATH1});
     }
     else {
-        chrome.browserAction.setIcon({path: PATH1});
+        chrome.browserAction.setIcon({path: PATH2});
     }
 });
