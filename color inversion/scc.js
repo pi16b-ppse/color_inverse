@@ -4,12 +4,14 @@
  * @const {string}
  */
 const ICON_PATH1 = "icon.png";
+
 /**
  * Путь ко второй иконке 
  *
  * @const {string}
  */
 const ICON_PATH2 = "icon2.png";
+
 
 chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.tabs.executeScript(null, {file:"jquery.js"}, function() {
