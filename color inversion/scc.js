@@ -1,5 +1,15 @@
-const ICON1 = "icon.png";
-const ICON2 = "icon2.png";
+/**
+ * Путь к первой иконке 
+ *
+ * @const {string}
+ */
+const ICON_PATH1 = "icon.png";
+/**
+ * Путь ко второй иконке 
+ *
+ * @const {string}
+ */
+const ICON_PATH2 = "icon2.png";
 
 chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.tabs.executeScript(null, {file:"jquery.js"}, function() {
@@ -8,9 +18,9 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 });
 chrome.extension.onMessage.addListener(function(request){
     if (request == true) {
-        chrome.browserAction.setIcon({path: ICON2});
+        chrome.browserAction.setIcon({path: ICON_PATH2});
     }
     else {
-        chrome.browserAction.setIcon({path: ICON1});
+        chrome.browserAction.setIcon({path: ICON_PATH1});
     }
 });
